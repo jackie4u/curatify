@@ -69,11 +69,12 @@ This is an example of how to list things you need to use the software and how to
 ### Installation
 
 1. Clone the repo
-   ```sh
+```sh
    git clone https://github.com/jackie4u/dime-pub.git
-   ```
+```
+
 2. Enter the name of your SQL Server in `appsettings.json` and eventually change the database name and security
-   ```json
+```json
   {
     "Logging": {
       "LogLevel": {
@@ -86,17 +87,19 @@ This is an example of how to list things you need to use the software and how to
       "DimePubConnection": "Data Source=<SQL Server>; Initial Catalog=DimePubDb; Integrated Security=True"
     }
   }
-   ```
+```
+
 3. Initialize database
-   ```powershell
+```powershell
    cd FeedDataLibrary/dime-pub
    dotnet ef --startup-project ../DimePubWeb migrations add UpdateDimePubDb
    dotnet ef --startup-project ../DimePubWeb database update
-   ```
+```
+
 4. Run the application
-   ```powershell
+```powershell
    dotnet run
-   ```
+```
 
 ## Usage
 
