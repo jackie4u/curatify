@@ -1,0 +1,63 @@
+﻿@* For more information *@
+
+@model Episodes
+
+<h3 class="text-center display-5">
+    Latest episodes
+</h3>
+
+<br />
+
+<div class="row">
+    <div class="btn-group justify-content-between" role="group" aria-label="Action bar">
+        <div>
+            @using (Html.BeginForm("Index", "Home", FormMethod.Get))
+            {
+                @*TODO: implement javascriot date picker*@
+                <p>
+                    Filter by publishing dates between &nbsp;
+                    @*<label for="startDate">Start date</label><input id="startDate" class="form-control" type="date" />*@
+                    @Html.TextBox("startDate", null, new { @class = "form-control date"})
+                    &nbsp; and end date &nbsp;
+                    @Html.TextBox("endDate", null, new { @class = "form-control date" })
+                    <br />
+                    <button type="submit" class="btn btn-primary float-left" value="Filter">
+                        <span class="fa-solid fa-magnifying-glass"></span>
+                        Filter
+                    </button>
+                </p>
+            }
+        </div>
+        <div>
+            <form asp-action="PodcastRefreshAll" method="post">
+                <button type="submit" class="btn btn-primary btn-space">
+                    <span class="fa-solid fa-arrows-rotate"></span>
+                    Refresh all
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+<br />
+@foreach (var f in Model.EpisodesList)
+{
+    <div class="card text-dark bg-light">
+        <div class="card-header">
+            <h5 class="card-title">@f.Title</h5>
+            @*TODO: Fix feed reference <b>@f.Feed.Title</b>*@
+            <i>@f.DatePublished</i>
+        </div>
+        <div class="card-body">
+            <p>@f.Description</p>
+        </div>
+        <div class="card-footer">
+            <a href="@f.Link">@f.Link</a>
+        </div>
+    </div>
+    <hr class="my-4" />
+}
+@*TODO: Fix paginator width*@
+<div page-model="@Model?.PagingInfo" page-action="Index" page-classes-enabled="true"
+     page-class="btn" page-class-normal="btn-outline-dark"
+     page-class-selected="btn-primary" class="btn-group pull-right m-1">
+</div>

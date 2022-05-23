@@ -1,0 +1,34 @@
+﻿@* For more information *@
+
+@model PodcastAdd
+
+<div class="col-6">
+    <br />
+    <form asp-action="PodcastAdd" method="post">
+        <div class="card text-dark bg-light mb-3">
+            <div class="card-header">
+                <h5 class="card-title display-6">Add a new podcast RSS feed</h5>
+            </div>
+            <div class="card-body">
+                <!--TODO: Add formatting of missing validations -->
+                <div asp-validation-summary="All"></div>
+                <div>
+                    <label class="form-label" asp-for="SourceUri">Source URL:</label>
+                    <input type="text" class="form-control" asp-for="SourceUri">
+                </div>
+                <br>
+                <div>
+                    <label class="form-label" asp-for="Note">Podcast Note:</label>
+                    <input type="text" class="form-control" asp-for="Note">
+                </div>
+                <br>
+                @*todo: Disable button on click*@
+                <button type="submit" class="btn btn-primary">
+                    Save new podcast feed
+                </button>
+            </div>
+            <div class="card-footer">
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/lib/font-awesome/css/all.min.css" rel="stylesheet" />
+
+    <title>Dime Pub</title>
+</head>
+
+<body>
+    <br />
+    <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+        <div class="container px-4 px-lg-5">
+            @*TODO: Fix hamburger menu*@
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse gx-4 gx-lg-5 justify-content-center" id="navbarNav">
+                <ul class="nav navbar-nav mr-auto">
+                    <li class="nav-item active"> <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index"> <span class="fa-solid fa-headphones"></span> Episodes </a> </li>
+                    <li class="vr"></li>
+                    <li class="nav-item"> <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Podcasts"> <span class="fa-solid fa-podcast"></span> Podcasts </a> </li>
+                    <li class="vr"></li>
+                    <li class="nav-item"> <a class="nav-link" asp-area="" asp-controller="Home" asp-action="PodcastAdd"> <span class="fa-solid fa-plus"></span> Add new podcast </a> </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <br />
+
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            @RenderBody()
+        </div>
+    </div>
+</body>
+</html>

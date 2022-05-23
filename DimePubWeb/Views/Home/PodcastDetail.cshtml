@@ -1,0 +1,78 @@
+﻿@* For more information *@
+
+@model PodcastDetail
+
+<h3 class="text-center display-5">
+    Podcast Detail
+</h3>
+
+<br />
+<div class="row">
+    <div class="btn-group justify-content-between" role="group" aria-label="Action bar">
+        <div>
+            <form asp-controller="Home" asp-action="PodcastDelete" asp-route-id="@Model.Podcast.FeedID" method="post">
+                <button type="submit" class="btn btn-primary">
+                    <span class="fa-solid fa-trash-can"></span>
+                    Delete
+                </button>
+            </form>
+        </div>
+        <div>
+            <form asp-controller="Home" asp-action="PodcastRefresh" asp-route-id="@Model.Podcast.FeedID" method="post">
+                <button type="submit" class="btn btn-primary btn-space">
+                    <span class="fa-solid fa-arrows-rotate"></span>
+                    Refresh
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+<br />
+<br />
+<div class="row">
+    <div class="card text-dark bg-light mb-3">
+        <div class="card-header">
+            <h5 class="card-title">
+                @Html.DisplayFor(model => model.Podcast.Title)
+            </h5>
+            <i>@Html.DisplayFor(model => model.Podcast.DatePublishedLast)</i>
+            <i>@Html.DisplayFor(model => model.Podcast.Language)</i>
+        </div>
+        <div class="card-body">
+            <i>@Html.DisplayFor(model => model.Podcast.Note)</i>
+            <p>@Html.DisplayFor(model => model.Podcast.Description)</p>
+        </div>
+        <div class="card-footer">
+            Link: <a href="@Html.DisplayFor(model => model.Podcast.Link)">@Html.DisplayFor(model => model.Podcast.Link)</a>
+            <br>
+            SourceUri: <a href="Model.SourceUri">@Html.DisplayFor(model => model.Podcast.SourceUri)</a>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <h4 class="text-center display-6">
+        <br />
+        Podcast Episodes:
+        <br />
+    </h4>
+</div>
+
+<div class="row">
+    @foreach (var item in Model.Podcast.FeedItems)
+    {
+        <div class="card text-dark bg-light mb-3">
+            <div class="card-header">
+                <h5 class="card-title">@item.Title</h5>
+                <i>@item.DatePublished</i>
+            </div>
+            <div class="card-body">
+                <p>@item.Description</p>
+            </div>
+            <div class="card-footer">
+                <a href="@item.Link">@item.Link</a>
+            </div>
+        </div>
+        <hr class="my-4" />
+    }
+</div>

@@ -1,0 +1,79 @@
+﻿@* For more information *@
+
+@model Podcasts
+
+<h3 class="text-center display-5">
+    Podcasts
+</h3>
+
+<br />
+
+<div class="row">
+    <div class="btn-group justify-content-between" role="group" aria-label="Action bar">
+        @using (Html.BeginForm("Podcasts", "Home", FormMethod.Get))
+        {
+            <p>
+                Filter by title: &nbsp;
+                @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)
+                &nbsp;
+                <button type="submit" class="btn btn-primary float-left" value="Search">
+                    <span class="fa-solid fa-magnifying-glass"></span>
+                    Search
+                </button>
+            </p>
+        }
+    </div>
+</div>
+<br />
+<table class="table">
+    <tr>
+        <th>
+            @*Title*@
+            @Html.DisplayNameFor(model => model.PodcastsList.FirstOrDefault().Title)
+        </th>
+        <th>
+            @*Note*@
+            @Html.DisplayNameFor(model => model.PodcastsList.FirstOrDefault().Note)
+        </th>
+        <th>
+            @*DatePublished*@
+            @Html.DisplayNameFor(model => model.PodcastsList.FirstOrDefault().DatePublishedLast)
+        </th>
+        <th>
+            @*ToDo: Add action for selected rows*@
+            Action
+        </th>
+    </tr>
+
+    @foreach (var podcast in Model.PodcastsList)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => podcast.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => podcast.Note)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => podcast.DatePublishedLast)
+            </td>
+            <td>
+                <div class="btn-group justify-content-between" role="group" aria-label="Action bar">
+                    <form asp-controller="Home" asp-action="PodcastDetail" asp-route-id="@podcast.FeedID" method="get">
+                        <button type="submit" class="btn btn-primary">
+                            <span class="fa-solid fa-info"></span>
+                            Detail
+                        </button>
+                    </form>
+                    &nbsp;&nbsp;|&nbsp;&nbsp;
+                    <form asp-controller="Home" asp-action="PodcastDelete" asp-route-id="@podcast.FeedID" method="post">
+                        <button type="submit" class="btn btn-primary">
+                            <span class="fa-solid fa-trash-can"></span>
+                            Delete
+                        </button>
+                    </form>
+                </div>
+            </td>
+        </tr>
+    }
+</table>
