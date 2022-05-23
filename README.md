@@ -103,7 +103,7 @@ To get a local copy up and running follow these simple example steps.
 
 ## Usage
 
-The content of the web app focuses on aggregating podcasts focusing on programming.
+The content of the web app focuses on aggregating podcast RSS feeds.
 
 ### Episodes (articles) - Index page
 - The index page lists all episodes (articles)
