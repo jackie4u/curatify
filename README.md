@@ -29,9 +29,9 @@ It aggregates **RSS feeds as podcast channels** and populates **recent RSS items
 
 ## About The Project
 
-<!-- ToDo: Add [![Dime Pub Screen Shot][dimepub-screenshot]](https://dimepub.azurewebsites.com) -->
+[![Screenshot](https://github.com/jackie4u/dime-pub/Screenshot-Index-01.jpg)](https://dimepub.azurewebsites.com)
 
-This project is only intended as a study project on which I tried to develop my first web app.
+This project is only intended as a study project on which I tried to develop **my first web app**.
 Web app aggregates RSS feeds for **podcast channel (RSS Feeds)** and populates recent **episodes (RSS items/articles)**.
 It implements a simple RSS reader ASP.NET Core Web App (Mode-View-Controller) with .Net 6.0 LTS Entity Framework Core 6 mainly in C# language.
 For GUI is used Bootstrap 5 and some icons from Font Awesome 6.
