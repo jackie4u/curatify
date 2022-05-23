@@ -32,14 +32,16 @@ It aggregates **RSS feeds as podcast channels** and populates **recent RSS items
 [![Screenshot](https://raw.githubusercontent.com/jackie4u/dime-pub/main/Screenshot-Index-01.jpg)](https://dimepub.azurewebsites.com)
 
 This project is only intended as a study project on which I tried to develop **my first web app**.
-Web app aggregates RSS feeds for **podcast channel (RSS Feeds)** and populates recent **episodes (RSS items/articles)**.
-It implements a simple RSS reader ASP.NET Core Web App (Mode-View-Controller) with .Net 6.0 LTS Entity Framework Core 6 mainly in C# language.
+
+Web app aggregates RSS feeds for **podcast channel** and populates recent **episodes (RSS items/articles)**.
+
+It is implemented as a simple RSS reader in ASP.NET Core (Mode-View-Controller) with .Net 6.0 and Entity Framework Core 6.
 For GUI is used Bootstrap 5 and some icons from Font Awesome 6.
 
-I tried to separate the data access layer into a stand-alone project **FeedDataLibrary** by repository pattern and MVVM approach.
-I have not yet grasped these concepts appropriately so it needs further refactoring.
+I have tried to separate the data layer into a stand-alone project **FeedDataLibrary** with repository pattern and MVVM approach.
+But I have not yet grasped these concepts appropriately so it needs further refactoring.
 
-There are currently some bugs and not implemented features. Some of them are marked in the code with *TODO* tag in a comment.
+There are currently some bugs and not implemented features. Some of them are marked in a comment with *TODO* tag .
 
 ### Built With
 
