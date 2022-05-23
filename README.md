@@ -58,8 +58,6 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-
 * Install .NET 6 (SDK and Runtime) from https://dotnet.microsoft.com/en-us/download/dotnet/6.0
 * Install powershell global tools
   ```powershell
