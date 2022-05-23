@@ -39,7 +39,7 @@ It is implemented as a simple RSS reader in ASP.NET Core (Mode-View-Controller) 
 For GUI is used Bootstrap 5 and some icons from Font Awesome 6.
 
 I have tried to separate the data layer into a stand-alone project **FeedDataLibrary** with repository pattern and MVVM approach.
-But I have not yet grasped these concepts appropriately so it needs further refactoring.
+But I have not grasped these concepts appropriately yet, so it needs further refactoring.
 
 There are currently some bugs and not implemented features. Some of them are marked in a comment with *TODO* tag .
 
