@@ -105,21 +105,21 @@ To get a local copy up and running follow these simple example steps.
 
 The content of the web app focuses on aggregating podcast RSS feeds.
 
-### Episodes (articles) - Index page
+### Episodes (articles):
 - The index page lists all episodes (articles)
 - If you are on a different page click on "Episodes" link in the top menu
 - By default, there are shown only the latest 10 episodes - for older episodes follows page numbers at the bottom of the page
 - To filter episodes (articles) by date choose the date range from the top header and press "Search"
 - To Reload all episodes (articles) from all podcasts (feeds) press the button "Refresh all"
 
-### Podcasts (feeds)
+### Podcasts (feeds):
 - To list all podcasts (feeds) click on "Podcasts"
 - To filter podcasts (feeds) by title enter string into the search textbox and press "Search"
 - To check the detail of the selected podcast (feed) and list all episodes (articles) in that podcast click on the "Detail" link in the "Podcasts" table
 - To delete a podcast (feed) click on the "Delete" link in the "Podcasts" table or the "Delete" button on the podcast detail page
 - To Reload articles in selected podcast (feed) press button "Refresh" on the podcast detail page
 
-To add a new RSS feed 
+#### To add a new RSS feed 
 1. **click on "Add new podcast"** 
 2. enter the "Source URL" of your favourite podcast channel - for example, Coding Blocks at "https://www.codingblocks.net/podcast-feed.xml"
 3. optionally add your custom "Podcast Note"
