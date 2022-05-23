@@ -13,7 +13,7 @@
         <div>
             @using (Html.BeginForm("Index", "Home", FormMethod.Get))
             {
-                @*TODO: implement javascriot date picker*@
+                @*TODO: implement javascript date picker*@
                 <p>
                     Filter by publishing dates between &nbsp;
                     @*<label for="startDate">Start date</label><input id="startDate" class="form-control" type="date" />*@
@@ -44,7 +44,6 @@
     <div class="card text-dark bg-light">
         <div class="card-header">
             <h5 class="card-title">@f.Title</h5>
-            @*TODO: Fix feed reference <b>@f.Feed.Title</b>*@
             <i>@f.DatePublished</i>
         </div>
         <div class="card-body">

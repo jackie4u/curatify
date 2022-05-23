@@ -10,7 +10,7 @@
                 <h5 class="card-title display-6">Add a new podcast RSS feed</h5>
             </div>
             <div class="card-body">
-                <!--TODO: Add formatting of missing validations -->
+                <!--TODO: Add formatting for missing validations -->
                 <div asp-validation-summary="All"></div>
                 <div>
                     <label class="form-label" asp-for="SourceUri">Source URL:</label>
@@ -22,7 +22,7 @@
                     <input type="text" class="form-control" asp-for="Note">
                 </div>
                 <br>
-                @*todo: Disable button on click*@
+                @*todo: Disable button on click (implement loader)*@
                 <button type="submit" class="btn btn-primary">
                     Save new podcast feed
                 </button>
