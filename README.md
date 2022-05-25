@@ -92,7 +92,6 @@ To get a local copy up and running follow these simple example steps.
 3. Initialize database
 ```powershell
    cd FeedDataLibrary/dime-pub
-   dotnet ef --startup-project ../DimePubWeb migrations add UpdateDimePubDb
    dotnet ef --startup-project ../DimePubWeb database update
 ```
 
