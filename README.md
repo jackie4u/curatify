@@ -46,8 +46,8 @@ There are currently some bugs and not implemented features. Some of them are mar
 ### Built With
 
 * ASP.NET Core Web App (Mode-View-Controller)
-* .Net 6.0 (LTS)
-* Entity Framework Core 6
+* .Net 7.0 (LTS)
+* Entity Framework Core 7
 * Microsoft SQL Server
 * Bootstrap 5
 * Font Awesome 6
