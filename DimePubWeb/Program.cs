@@ -1,5 +1,5 @@
-using Microsoft.EntityFrameworkCore;
 using FeedDataLibrary.Services;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,7 +7,7 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<FeedDataContext>(opts => {
     opts.UseSqlServer(
-        builder.Configuration.GetConnectionString("DimePubConnection"));
+        builder.Configuration.GetConnectionString("DimePubDbConnection"));
 });
 
 builder.Services.AddScoped<IFeedRepository, EFFeedRepository>();
