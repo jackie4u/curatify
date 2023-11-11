@@ -1,6 +1,6 @@
-# Dime Pub
-Simple web RSS reader implemented with "ASP.NET Core Web App". 
-It aggregates **RSS feeds as podcast channels** and populates **recent RSS items as episodes**.
+# Curatify
+A web application that curates various media sources, implemented with "ASP.NET Core Web App". 
+It aggregates **media sources such as podcast channels, YouTube videos, and blog posts** (RSS feeds) and populates **recent items**.
 
 <details>
   <summary>Table of Contents</summary>
@@ -31,11 +31,12 @@ It aggregates **RSS feeds as podcast channels** and populates **recent RSS items
 
 [![Screenshot](https://raw.githubusercontent.com/jackie4u/dime-pub/main/Screenshot-Index-01.jpg)](https://dimepub.azurewebsites.com)
 
-This project is only intended as a study project on which I tried to develop **my first web app**.
+This project is intended as hobby project on which I tried a various developing techniques.
+Intend is to develop a comprehensive media aggregator as **a web app that curates various media sources**.
 
-Web app aggregates RSS feeds for **podcast channel** and populates recent **episodes (RSS items/articles)**.
+Web app aggregates media sources like **podcast channels, YouTube videos, and blog posts** and populates recent **episodes (items/articles)**.
 
-It is implemented as a simple RSS reader in ASP.NET Core (Mode-View-Controller) with .Net 6.0 and Entity Framework Core 6.
+It is implemented as a simple media reader in ASP.NET Core (Model-View-Controller) with .Net 7.0 and Entity Framework Core 7.
 For GUI is used Bootstrap 5 and some icons from Font Awesome 6.
 
 I have tried to separate the data layer into a stand-alone project **FeedDataLibrary** with repository pattern and MVVM approach.
@@ -45,7 +46,7 @@ There are currently some bugs and not implemented features. Some of them are mar
 
 ### Built With
 
-* ASP.NET Core Web App (Mode-View-Controller)
+* ASP.NET Core Web App (Model-View-Controller)
 * .Net 7.0 (LTS)
 * Entity Framework Core 7
 * Microsoft SQL Server
@@ -102,7 +103,7 @@ To get a local copy up and running follow these simple example steps.
 
 ## Usage
 
-The content of the web app focuses on aggregating podcast RSS feeds.
+The content of the web app focuses on aggregating various media sources (currenlty only via RSS feeds).
 
 ### Episodes (articles):
 - The index page lists all episodes (articles)
@@ -111,32 +112,32 @@ The content of the web app focuses on aggregating podcast RSS feeds.
 - To filter episodes (articles) by date choose the date range from the top header and press "Filter"
 - To Reload all episodes (articles) from all podcasts (feeds) press the button "Refresh all"
 
-### Podcasts (feeds):
-- To list all podcasts (feeds) click on "Podcasts" link in the top menu
-- To filter podcasts (feeds) by title enter string into the search textbox and press "Search"
-- To check the detail of the selected podcast (feed) and list all episodes (articles) in that podcast click on the "Detail" link in the "Podcasts" table
-- To delete a podcast (feed) click on the "Delete" link in the "Podcasts" table or the "Delete" button on the podcast detail page
-- To Reload articles in selected podcast (feed) press button "Refresh" on the podcast detail page
+### Sources:
+- To list all sources click on "Sources" link in the top menu
+- To filter sources by title enter string into the search textbox and press "Search"
+- To check the detail of the selected source and list all episodes (articles) in that source click on the "Detail" link in the "Sources" table
+- To delete a source click on the "Delete" link in the "Sources" table or the "Delete" button on the source detail page
+- To Reload articles in selected source press button "Refresh" on the source detail page
 
 #### To add a new RSS feed 
-1. **click on "Add new podcast"** 
-2. enter the "Source URL" of your favourite podcast channel - for example, Coding Blocks at "https://www.codingblocks.net/podcast-feed.xml"
-3. optionally add your custom "Podcast Note"
-3. press the button "Save new podcast feed"
+1. **click on "Add new source"** 
+2. enter the "Source URL" of your favourite media source - for example, Coding Blocks at "https://www.codingblocks.net/podcast-feed.xml"
+3. optionally add your custom "Source Note"
+3. press the button "Save new source"
 
 ## Roadmap
 
 - [ ] Implement about page
 - [ ] Improve graphic design
-- [ ] Add checkboxes for deleting multiple podcasts from the podcast list
+- [ ] Add checkboxes for deleting multiple sources from the source list
     - [ ] Add button for checking all checkboxes
 - [ ] Implement error handling
 - [ ] Add sorting to list views and tables
-    - [ ] Add sorting to podcasts
+    - [ ] Add sorting to sources
     - [ ] Add sorting to episodes
 - [ ] Implement IsRead flag
 
-See the [open issues](https://github.com/jackie4u/dime-pub/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/jackie4u/curatify/issues) for a full list of proposed features (and known issues).
 
 ## Contributing
 
@@ -162,16 +163,16 @@ Twitter - [@jackie4u](https://twitter.com/jackie4u)
 
 **This project is influenced by learning from the great book ["Pro ASP.NET Core 6: Develop Cloud-Ready Web Applications Using MVC, Blazor, and Razor Pages"](https://www.amazon.com/dp/B09TDKPSCZ) by [Adam Feeman(MarkP88)](https://github.com/MarkP88).**
 
-[contributors-shield]: https://img.shields.io/github/contributors/jackie4u/dime-pub.svg?style=for-the-badge
-[contributors-url]: https://github.com/jackie4u/dime-pub/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/jackie4u/dime-pub.svg?style=for-the-badge
-[forks-url]: https://github.com/jackie4u/dime-pub/network/members
-[stars-shield]: https://img.shields.io/github/stars/jackie4u/dime-pub.svg?style=for-the-badge
-[stars-url]: https://github.com/jackie4u/dime-pub/stargazers
-[issues-shield]: https://img.shields.io/github/issues/jackie4u/dime-pub.svg?style=for-the-badge
-[issues-url]: https://github.com/jackie4u/dime-pub/issues
-[license-shield]: https://img.shields.io/github/license/jackie4u/dime-pub.svg?style=for-the-badge
-[license-url]: https://github.com/jackie4u/dime-pub/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/jackie4u/curatify.svg?style=for-the-badge
+[contributors-url]: https://github.com/jackie4u/curatify/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/jackie4u/curatify.svg?style=for-the-badge
+[forks-url]: https://github.com/jackie4u/curatify/network/members
+[stars-shield]: https://img.shields.io/github/stars/jackie4u/curatify.svg?style=for-the-badge
+[stars-url]: https://github.com/jackie4u/curatify/stargazers
+[issues-shield]: https://img.shields.io/github/issues/jackie4u/curatify.svg?style=for-the-badge
+[issues-url]: https://github.com/jackie4u/curatify/issues
+[license-shield]: https://img.shields.io/github/license/jackie4u/curatify.svg?style=for-the-badge
+[license-url]: https://github.com/jackie4u/curatify/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/vackar
 [product-screenshot]: images/screenshot.png
