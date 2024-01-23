@@ -29,18 +29,22 @@ It aggregates **media sources such as podcast channels, YouTube videos, and blog
 
 ## About The Project
 
+> [!WARNING]  
+> This repository represents a technical exercise I undertook early in my ASP.NET learning journey.
+> At present, it is not fully operational or finalized. However, I may choose to revisit and further develop it in the future.
+
 [![Screenshot](https://raw.githubusercontent.com/jackie4u/dime-pub/main/Screenshot-Index-01.jpg)](https://dimepub.azurewebsites.com)
 
-This project is intended as hobby project on which I tried a various developing techniques.
-Intend is to develop a comprehensive media aggregator as **a web app that curates various media sources**.
+This project is intended as a hobby project on which I tried various developing techniques.
+The intent is to develop a comprehensive media aggregator as **a web app that curates various media sources**.
 
 Web app aggregates media sources like **podcast channels, YouTube videos, and blog posts** and populates recent **episodes (items/articles)**.
 
 It is implemented as a simple media reader in ASP.NET Core (Model-View-Controller) with .Net 7.0 and Entity Framework Core 7.
-For GUI is used Bootstrap 5 and some icons from Font Awesome 6.
+For GUI, Bootstrap 5 and some icons from Font Awesome 6.
 
-I have tried to separate the data layer into a stand-alone project **FeedDataLibrary** with repository pattern and MVVM approach.
-But I have not grasped these concepts appropriately yet, so it needs further refactoring.
+I have tried to separate the data layer into a stand-alone project **FeedDataLibrary** with a repository pattern and MVVM approach.
+However, I have not grasped these concepts appropriately yet, so it need further refactoring.
 
 There are currently some bugs and not implemented features. Some of them are marked in a comment with *TODO* tag .
 
@@ -152,7 +156,7 @@ Don't forget to give the project a star! Thanks again!
 
 ## License
 
-Distributed under the MIT License. 
+Distributed under the GNU GENERAL PUBLIC LICENSE v3 License. 
 See `LICENSE.txt` for more information.
 
 ## Contact
